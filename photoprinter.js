@@ -1,9 +1,7 @@
 // lOAD IMAGES
-var token = 'xxx',
-    hashtag='joefest',
+var hashtag='joefest',
     num_photos = 20,
     identifier = 0;
-
 
 $.ajax({
 	url: 'https://api.instagram.com/v1/tags/' + hashtag + '/media/recent',
