@@ -1,5 +1,28 @@
-#image_feed img{
+#image_feed img {
   float:left;
   width:200px;
   height:200px;
-  margin:10px
+  margin:10px;
+  }
+
+ @media print {
+    body {
+      visibility: hidden;
+    }
+
+    #toPrint {
+      visibility: visible;
+    }
+
+    #toPrint {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  @media screen {
+      #toPrint {
+          visibility: hidden;
+      }
+  }

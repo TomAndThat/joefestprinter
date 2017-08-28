@@ -9,7 +9,7 @@ $.ajax({
     success: function(data){
         console.log(data);
         for(x in data.data){
-            $('div').append('<img src="'+data.data[x].images.standard_resolution.url+'"></img>');
+            $('#image_feed').append('<img src="'+data.data[x].images.standard_resolution.url+'"></img>');
         }
 
         // Select and Output Image
@@ -24,7 +24,13 @@ $.ajax({
 
             outputImg = new Image();
             outputImg.src = outputSrc;
-            previewContext.drawImage(outputImg, 20, 20, 1200, 1200);
+            previewContext.drawImage(outputImg, 40, 40, 1160, 1160);
+
+            // Print Image
+            outputImg.onload = function(){
+                console.log("Ready to print");
+                window.print();
+            }
         });
     },
     error: function(data){
