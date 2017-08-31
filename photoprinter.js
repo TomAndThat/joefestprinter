@@ -24,7 +24,7 @@ $.ajax({
 
             outputImg = new Image();
             outputImg.src = outputSrc;
-            previewContext.drawImage(outputImg, 40, 40, 1160, 1160);
+            previewContext.drawImage(outputImg, 40, 40, 420, 420);
 
             // Print Image
             outputImg.onload = function(){

@@ -5,9 +5,15 @@
   margin:10px;
   }
 
- @media print {
-    body {
-      visibility: hidden;
+@media print {
+
+    @page {
+        size: auto;
+        margin: 0;
+    }
+
+    #excludePrint {
+        display: none;
     }
 
     #toPrint {
